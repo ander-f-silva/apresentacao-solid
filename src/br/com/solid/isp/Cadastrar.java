@@ -6,8 +6,8 @@ public interface Cadastrar<E> {
 	
 	public void deletar(E element);
 	
-	public void consultar(E element);
+	public E consultar(Long id);
 	
-	public void atualizar(E element);
+	public void atualizar(Long id, E element);
 
 }

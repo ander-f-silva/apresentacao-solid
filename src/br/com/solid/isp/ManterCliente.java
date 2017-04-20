@@ -1,29 +1,34 @@
 package br.com.solid.isp;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import br.com.solid.isp.vo.Cliente;
 
 public class ManterCliente implements Cadastrar<Cliente> {
 
-	@Override
-	public void adicionar(Cliente element) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void deletar(Cliente element) {
+	private List<Cliente> clientes = new ArrayList<>();
 	
-	}
-
 	@Override
-	public void consultar(Cliente element) {
-		// TODO Auto-generated method stub
+	public void adicionar(Cliente cliente) {
+		clientes.add(cliente);
 		
 	}
 
 	@Override
-	public void atualizar(Cliente element) {
-		// TODO Auto-generated method stub
+	public void deletar(Cliente cliente) {
+		clientes.remove(cliente);
+	}
+
+	@Override
+	public Cliente consultar(Long id) {
+		return clientes.get(id.intValue());
+		
+	}
+
+	@Override
+	public void atualizar(Long id, Cliente element) {
+		
 		
 	}
 
