@@ -2,6 +2,8 @@ package br.com.solid.isp;
 
 import java.util.List;
 
+import javax.mail.MethodNotSupportedException;
+
 public interface Cadastrar<E> {
 	
 	public void adicionar(E element);
@@ -10,7 +12,7 @@ public interface Cadastrar<E> {
 	
 	public E consultar(Long id);
 
-	public void atualizar(E element);
+	public void atualizar(E element) throws MethodNotSupportedException;
 	
 	public List<E> listar();
 

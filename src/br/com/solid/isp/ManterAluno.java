@@ -3,9 +3,10 @@ package br.com.solid.isp;
 import java.util.LinkedList;
 import java.util.List;
 
+
 import br.com.solid.isp.vo.Aluno;
 
-public class ManterAluno implements Cadastrar<Aluno> {
+public class ManterAluno implements CadastroAluno {
 
 	private List<Aluno> alunos = new LinkedList<Aluno>();
 	
@@ -26,16 +27,10 @@ public class ManterAluno implements Cadastrar<Aluno> {
 		return alunos.get(id.intValue());	
 	}
 
-	@Override
-	public void atualizar(Aluno aluno) {
-		
-		
-	}
 
-	@Override
-	public List<Aluno> listar() {
-		
-		return null;
-	}
+
+
+
+
 
 }
