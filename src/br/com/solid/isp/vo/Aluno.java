@@ -2,13 +2,13 @@ package br.com.solid.isp.vo;
 
 import java.util.Date;
 
-public class Cliente {
+public class Aluno {
 	
 	private String nome;
 	
 	private Date dataNascimento;
 
-	public Cliente(String nome, Date dataNascimento) {
+	public Aluno(String nome, Date dataNascimento) {
 		super();
 		this.nome = nome;
 		this.dataNascimento = dataNascimento;
