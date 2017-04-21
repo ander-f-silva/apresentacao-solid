@@ -28,7 +28,7 @@ public class Relatorio {
 		
 		try {
 			//Abrir a conexão com o banco de dados			
-			conexao = DriverManager.getConnection("jdbc:mysql://localhost:3306/timesheet", "spyder", "spyder");
+			conexao = DriverManager.getConnection("jdbc:mysql://localhost:3306/timesheet", "root", "root");
 			
 			//Realiza consulta para efetuar 
 			
@@ -38,7 +38,7 @@ public class Relatorio {
 			registros = operacaoSql.executeQuery();
 			
 			//Gerar o arquivo para gravar o relatório
-			FileWriter arq = new FileWriter("/home/anderson/relario.txt");
+			FileWriter arq = new FileWriter("/home/anderson_silva/relatorio/arquivo.txt");
 		    PrintWriter gravarArq = new PrintWriter(arq);
 		 			
 		   //Lê os registros da base  
