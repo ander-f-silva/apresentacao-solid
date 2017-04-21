@@ -2,7 +2,7 @@ package br.com.solid.ocp;
 
 import java.util.Scanner;
 
-public class IntermediadorBatch {
+public class ExecutorBatch {
 
 	@SuppressWarnings("resource")
 	public static void main(String[] args) {
