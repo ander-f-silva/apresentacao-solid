@@ -1,6 +1,12 @@
 package br.com.solid.srp;
 
-public class ExecutorRelatorio {
+import java.util.List;
+
+import br.com.solid.srp.dao.LancamentoHorasDao;
+import br.com.solid.srp.dao.vo.Lancamento;
+import envio.Email;
+
+public class ExecutorRelatorioLancamentosHoras {
 
 	public static void main(String[] args) {
 		
@@ -10,10 +16,17 @@ public class ExecutorRelatorio {
 		System.out.println("						  			");
 		System.out.println("####################################");
 
-		Relatorio relatorio = new Relatorio();
+		RelatorioLancamentoHoras relatorio = new RelatorioLancamentoHoras();
 		
-		boolean sucesso = relatorio.gerar();
-				
+		LancamentoHorasDao dao = new LancamentoHorasDao();
+
+		List<Lancamento> lancamentos = dao.listar();
+		
+		boolean sucesso = relatorio.gerar(lancamentos);
+		
+		Email email = new Email();
+		email.enviar();
+		
 		if (sucesso) {
 			System.out.println("Operação realizada com sucesso");
 			System.exit(0);
