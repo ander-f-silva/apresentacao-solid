@@ -1,6 +1,6 @@
 package br.com.solid.ocp;
 
-public class ExpurgoBatch {
+public class ExpurgoBatch implements Batch {
 
 	public void processar() {
 		System.out.println("====================== ExpurgoBatch =======================");

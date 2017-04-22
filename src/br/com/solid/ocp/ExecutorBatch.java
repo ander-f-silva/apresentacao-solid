@@ -9,22 +9,9 @@ public class ExecutorBatch {
 				
 		Scanner sc = new Scanner(System.in);
 		
-		String processo = sc.next();
+		String nome = sc.next();
 		
-		if ("expurgo".equals(processo)) {
-			ExpurgoBatch eb = new ExpurgoBatch();	
-			eb.processar();
-		}
-		
-		if ("relatorio".equals(processo)) {
-			RelatorioFaturametoBatch rb = new RelatorioFaturametoBatch();
-			rb.processar();
-		}
-		
-		if ("inclusao".equals(processo)) {
-			InclusaoClientesBatch icb = new InclusaoClientesBatch();
-			icb.processar();
-		}		
+		Processo.getBatch(nome).processar();
 	}
 		
 	
